@@ -10,7 +10,7 @@
     "start": "parcel --hmr-hostname localhost index.html",
     "build": "rm -rf .cache dist && parcel build index.html",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -b master"
   },
   "dependencies": {
     "@types/react": "^16.9.41",
