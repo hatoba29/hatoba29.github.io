@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap");
+
+/* color scheme (One Dark) */
+$bg: #282c34;
+$fg: #abb2bf;
+$red: #e06c75;
+$green: #98c379;
+$yellow: #e5c07b;
+$blue: #61afef;
+$magenta: #c678dd;
+$cyan: #56b6c2;
+$white: #d7dae0;
+
+body {
+  width: 80%;
+  margin: 60px auto;
+  background-color: $bg;
+  font-family: "Source Code Pro", monospace;
+  color: $fg;
+  text-align: center;
+}
+
+h1 {
+  span {
+    color: $yellow;
+  }
+}
+
+a {
+  color: $green;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "hatoba29.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hatoba29/hatoba29.github.io.git",
+  "author": "Tsugu Hatoba <hatoba29@naver.com>",
+  "license": "MIT",
+  "homepage": "http://hatoba29.github.io",
+  "scripts": {
+    "start": "parcel --hmr-hostname localhost index.html",
+    "build": "rm -rf .cache dist && parcel build index.html",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "sass": "^1.26.10",
+    "typescript": "^3.9.6"
+  }
+}
