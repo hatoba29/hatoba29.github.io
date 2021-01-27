@@ -7,7 +7,7 @@ module.exports = {
     app: path.resolve(__dirname, "src", "App.tsx")
   },
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "docs"),
     filename: "[name].js",
     chunkFilename: "[name].chunk.js"
   },
