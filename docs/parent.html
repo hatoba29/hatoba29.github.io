@@ -6,7 +6,7 @@
 </head>
 <body>
 <button id="btn">자식에게 메시지 보내기</button>
-<iframe id="iframe" width="0" height="0" src="https://3d6b-183-97-141-65.ngrok.io/test.html"></iframe>
+<iframe id="iframe" width="0" height="0" src="https://8b60-183-97-141-65.ngrok.io/test.html"></iframe>
 <script>
     console.log("[parent] loaded");
 
@@ -14,11 +14,11 @@
     btn.addEventListener("click", function () {
         console.log("[parent] send message to iframe");
         var iframe = document.getElementById("iframe");
-        iframe.contentWindow.postMessage("hello from parents", "https://3d6b-183-97-141-65.ngrok.io");
+        iframe.contentWindow.postMessage("hello from parents", "https://8b60-183-97-141-65.ngrok.io");
     });
 
     window.addEventListener("message", function (e) {
-        if (e.origin !== "https://3d6b-183-97-141-65.ngrok.io") {
+        if (e.origin !== "https://8b60-183-97-141-65.ngrok.io") {
             console.log("[iframe] origin not matched:", e.origin);
             return;
         }
