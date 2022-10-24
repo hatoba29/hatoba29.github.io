@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script>
+        console.log("[iframe] loaded");
+        localStorage.setItem("iframeTest", "123123fe");
+        console.log("[iframe] iframeTest:", localStorage.getItem("iframeTest"));
+        window.addEventListener("message", function (e) {
+            if (e.origin !== "http://localhost:22090") {
+                console.log("[iframe] origin not matched");
+                return;
+            }
+            console.log("[iframe] message received:", e.data);
+            console.log("[iframe] send iframeTest to parent:", localStorage.getItem("iframeTest"));
+            e.source.postMessage(localStorage.getItem("iframeTest"), e.origin);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
